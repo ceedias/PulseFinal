@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PessoaEditDlg" widgetVar="PessoaEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditPessoaTitle}">
+            <h:form id="PessoaEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{pessoaController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_email}" for="email" />
+                        <p:inputText id="email" value="#{pessoaController.selected.email}" title="#{bundle.EditPessoaTitle_email}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_dt_nasc}" for="dt_nasc" />
+                        <p:calendar id="dt_nasc" pattern="MM/dd/yyyy" value="#{pessoaController.selected.dt_nasc}" title="#{bundle.EditPessoaTitle_dt_nasc}"  showOn="button"/>
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_senha}" for="senha" />
+                        <p:inputText id="senha" value="#{pessoaController.selected.senha}" title="#{bundle.EditPessoaTitle_senha}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_login}" for="login" />
+                        <p:inputText id="login" value="#{pessoaController.selected.login}" title="#{bundle.EditPessoaTitle_login}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_cep}" for="cep" />
+                        <p:inputText id="cep" value="#{pessoaController.selected.cep}" title="#{bundle.EditPessoaTitle_cep}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_rua}" for="rua" />
+                        <p:inputText id="rua" value="#{pessoaController.selected.rua}" title="#{bundle.EditPessoaTitle_rua}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_estados}" for="estados" />
+                        <p:inputText id="estados" value="#{pessoaController.selected.estados}" title="#{bundle.EditPessoaTitle_estados}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_comentario}" for="comentario" />
+                        <p:inputText id="comentario" value="#{pessoaController.selected.comentario}" title="#{bundle.EditPessoaTitle_comentario}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_cnpj}" for="cnpj" />
+                        <p:inputText id="cnpj" value="#{pessoaController.selected.cnpj}" title="#{bundle.EditPessoaTitle_cnpj}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_qtd_funcionarios}" for="qtd_funcionarios" />
+                        <p:inputText id="qtd_funcionarios" value="#{pessoaController.selected.qtd_funcionarios}" title="#{bundle.EditPessoaTitle_qtd_funcionarios}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_qtd_filiais}" for="qtd_filiais" />
+                        <p:inputText id="qtd_filiais" value="#{pessoaController.selected.qtd_filiais}" title="#{bundle.EditPessoaTitle_qtd_filiais}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_qtd_filhos}" for="qtd_filhos" />
+                        <p:inputText id="qtd_filhos" value="#{pessoaController.selected.qtd_filhos}" title="#{bundle.EditPessoaTitle_qtd_filhos}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_qtd_cigarros}" for="qtd_cigarros" />
+                        <p:inputText id="qtd_cigarros" value="#{pessoaController.selected.qtd_cigarros}" title="#{bundle.EditPessoaTitle_qtd_cigarros}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_sexo}" for="sexo" />
+                        <p:inputText id="sexo" value="#{pessoaController.selected.sexo}" title="#{bundle.EditPessoaTitle_sexo}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_nome}" for="nome" />
+                        <p:inputText id="nome" value="#{pessoaController.selected.nome}" title="#{bundle.EditPessoaTitle_nome}" />
+                        <p:outputLabel value="#{bundle.EditPessoaLabel_id}" for="id" />
+                        <p:inputText id="id" value="#{pessoaController.selected.id}" title="#{bundle.EditPessoaTitle_id}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{pessoaController.update}" value="#{bundle.Save}" update="display,:PessoaListForm:datalist,:growl" oncomplete="handleSubmit(args, 'PessoaEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="PessoaEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PessoaViewDlg" widgetVar="PessoaViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewPessoaTitle}">
+            <h:form id="PessoaViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{pessoaController.selected != null}">
+                        <h:outputText value="#{bundle.ViewPessoaLabel_email}"/>
+                        <h:outputText value="#{pessoaController.selected.email}" title="#{bundle.ViewPessoaTitle_email}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_dt_nasc}"/>
+                        <h:outputText value="#{pessoaController.selected.dt_nasc}" title="#{bundle.ViewPessoaTitle_dt_nasc}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_senha}"/>
+                        <h:outputText value="#{pessoaController.selected.senha}" title="#{bundle.ViewPessoaTitle_senha}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_login}"/>
+                        <h:outputText value="#{pessoaController.selected.login}" title="#{bundle.ViewPessoaTitle_login}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_cep}"/>
+                        <h:outputText value="#{pessoaController.selected.cep}" title="#{bundle.ViewPessoaTitle_cep}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_rua}"/>
+                        <h:outputText value="#{pessoaController.selected.rua}" title="#{bundle.ViewPessoaTitle_rua}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_estados}"/>
+                        <h:outputText value="#{pessoaController.selected.estados}" title="#{bundle.ViewPessoaTitle_estados}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_comentario}"/>
+                        <h:outputText value="#{pessoaController.selected.comentario}" title="#{bundle.ViewPessoaTitle_comentario}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_cnpj}"/>
+                        <h:outputText value="#{pessoaController.selected.cnpj}" title="#{bundle.ViewPessoaTitle_cnpj}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_qtd_funcionarios}"/>
+                        <h:outputText value="#{pessoaController.selected.qtd_funcionarios}" title="#{bundle.ViewPessoaTitle_qtd_funcionarios}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_qtd_filiais}"/>
+                        <h:outputText value="#{pessoaController.selected.qtd_filiais}" title="#{bundle.ViewPessoaTitle_qtd_filiais}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_qtd_filhos}"/>
+                        <h:outputText value="#{pessoaController.selected.qtd_filhos}" title="#{bundle.ViewPessoaTitle_qtd_filhos}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_qtd_cigarros}"/>
+                        <h:outputText value="#{pessoaController.selected.qtd_cigarros}" title="#{bundle.ViewPessoaTitle_qtd_cigarros}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_sexo}"/>
+                        <h:outputText value="#{pessoaController.selected.sexo}" title="#{bundle.ViewPessoaTitle_sexo}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_nome}"/>
+                        <h:outputText value="#{pessoaController.selected.nome}" title="#{bundle.ViewPessoaTitle_nome}"/>
+                        <h:outputText value="#{bundle.ViewPessoaLabel_id}"/>
+                        <h:outputText value="#{pessoaController.selected.id}" title="#{bundle.ViewPessoaTitle_id}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="PessoaViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
