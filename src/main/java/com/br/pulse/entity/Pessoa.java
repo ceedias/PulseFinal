@@ -7,10 +7,15 @@ package com.br.pulse.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -19,26 +24,50 @@ import javax.persistence.TemporalType;
  * @author cesardias
  */
 @Entity
+
+
 public class Pessoa implements Serializable {
 
+    
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    
+    @Column(nullable = false)
     private String nome;
+    
+    @Column(nullable = false)
      private String email;
      
      @Temporal(TemporalType.DATE)
      private Date dt_nasc;
      
+     @Column(nullable = false)
      private String senha;
+     
+     @Column(nullable = false)
      private String login;
+     
+     @Column(nullable = false)
      private int cep;
+     
+     @Column(nullable = false)
      private String rua;
+     
+     @Column(nullable = false)
      private String Estados;
+     
+     
      private String Comentario;
+     
+     @Column(nullable = false)
      private int cnpj;
+     
+     @Column(nullable = false)
     private int qtd_funcionarios;
+     
+     @Column(nullable = false)
     private int qtd_filiais;
 
     public String getEmail() {
@@ -145,6 +174,13 @@ public class Pessoa implements Serializable {
         this.qtd_cigarros = qtd_cigarros;
     }
 
+
+    private int qtd_filhos;
+    private int qtd_cigarros;
+  
+   @Column(nullable = false)
+    private String sexo;
+
     public String getSexo() {
         return sexo;
     }
@@ -152,9 +188,7 @@ public class Pessoa implements Serializable {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-    private int qtd_filhos;
-    private int qtd_cigarros;
-    private String sexo;
+
 
     public String getNome() {
         return nome;

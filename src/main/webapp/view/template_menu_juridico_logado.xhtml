@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Pulse Probióticos</title>
+        <style type="text/css">
+
+        </style>
+    </h:head>
+     <h:body style="background-color: #1E90FF">
+        <h:form>  
+            <p:growl id="messages"/>
+
+            <p:menubar style=" background-color: #363636">
+                <p:menuitem value="Index" url="indexLogon.xhtml" icon="ui-icon-close" />
+                <p:submenu label="Produtos" icon="ui-icon-cart">
+                    <p:submenu label="Objetivo" icon="ui-icon-contact">
+                        <p:menuitem value="Emagrecimento" url="produtos.xhtml" />
+                        <p:menuitem value="Massa Muscular" url="produtos.xhtml" />
+                    </p:submenu>
+
+                    <p:separator />
+                    <p:menuitem value="Sobre Nós" url="sobrenos.html" />
+                </p:submenu>
+
+                <p:submenu label="Meus Dados" icon="ui-icon-person">
+                    <p:menuitem value="Alterar" url="form_cliente_fisico_logado.xhtml" icon="ui-icon-person" />
+                    
+                </p:submenu>
+
+
+                <p:menuitem value="Sobre Nós" url="sobrenos.html" icon="ui-icon-close" />
+                <p:menuitem value="Sair" url="indexLogon.xhtml" icon="ui-icon-close" />
+                
+
+            </p:menubar>
+        </h:form>
+
+
+        <ui:insert name="menulogadofisico"/>
+
+
+        <!-- Inicio do footer -->
+        <section class="footer">
+            <div class="container">
+
+                <div class="col-lg-4  col-md-4 col-sm-4">
+                    <div class="footer_dv">
+                        <h4>Suplementos</h4>
+                        <ul>
+                            <li class="line_rv"><a href="canon-printer-support.php">Suplementos para Emagrecimento</a></li>
+
+                            <li><a href="hp-printer-support.php">Suplementos para Bucking</a></li>
+                            <li><a href="dell-printer-support.php">Suplementos para Cutting</a></li>
+                            <li><a href="epson-printer-support.php">Suplementos em Promoção</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4">
+                    <div class="footer_dv">
+                        <h4>CADASTRE-SE</h4>
+                        <ul>
+                            <li><a href="form_cliente_fisico.html">Cliente Fisico</a></li>
+                            <li><a href="form_cliente_juridico.html">Cliente Juridico</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4">
+                    <div class="footer_dv">
+                        <h4>Entre em Contato</h4>
+                        <p>Pulse Suporte 24hs</p>
+                        <p>BRA-SP +55 (11) 2781-2675<br />
+
+
+                        </p></div>
+                </div>
+
+            </div>
+        </section>
+    </h:body>
+</html>
+

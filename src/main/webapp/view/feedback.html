@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Pulse</title>
+  <link rel=stylesheet href="../resources/css/bootstrap.min.css">
+  <link rel=stylesheet href="../resources/css/estilo_feedback.css">
+  <meta charset=utf-8>
+  <meta name=description content="">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-statix-top navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img alt="Brand" src="../resources/media/logos.png" width="25px" align="middle">   
+        </a>
+
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="feedback.html">Feedback<span class="sr-only">(current)</span></a></li>
+          <li class="active"><a href="produtos.html">Produtos</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="form_cliente_fisico.html">Cliente Físico</a></li>
+              <li><a href="form_cliente_juridico.html">Cliente Jurídico</a></li>
+             <!-- Exemplo de Link Separado <li role="separator" class="divider"></li>-->
+            </ul>
+          </li>
+        </ul>
+  
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html">Entrar</a></li>
+          <li><a href="sobrenos.html">Quem somos nós</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+
+
+    </div><!-- /.container-fluid -->
+  </nav>
+<!-- Titulo -->
+<div class="container">
+    <div class="row">
+        <div class="page-header">
+          <h1>Sua opinião é muito importante para nós</h1>
+          <span class="icon-bar">
+            <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
+          </span>
+          <h2>Pode ser crítica ou sugestão!</h2>
+        </div>
+    </div>
+</div>
+
+  <!-- Formulario de Feedback -->
+
+  <div class="container">    
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+      <div class="panel panel-info" >
+        <div class="panel-heading">
+          <div class="panel-title">Feedback</div>
+          
+        </div>     
+
+        <div style="padding-top:30px" class="panel-body" >
+
+          <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+          <form class="form-horizontal">
+            <fieldset>
+
+
+
+              <!-- Text input-->
+              <div class="control-group">
+                <label class="control-label" for="textinput">Nome</label>
+                <div class="controls">
+                  <input id="textinput" name="nome" type="text" placeholder="Digite seu nome" class="input-xlarge">
+
+                </div>
+              </div>
+
+        
+
+              <!-- Multiple Radios -->
+              <div class="control-group">
+                <label class="control-label" for="radios">Sexo</label>
+                <div class="controls">
+                  <label class="radio" for="radios-0">
+                    <input type="radio" name="radios" id="radios-0" value="Masculino" checked="checked">
+                    Masculino
+                  </label>
+                  <label class="radio" for="radios-1">
+                    <input type="radio" name="radios" id="radios-1" value="Feminino">
+                    Feminino
+                  </label>
+                </div>
+              </div>
+
+              <!-- Textarea -->
+              <div class="control-group">
+                <label class="control-label" for="textarea">Deixe sua mensagem</label>
+                <div class="controls">                     
+                  <textarea id="textarea" name="mensagem" placeholder="Digite aqui"></textarea>
+                </div>
+              </div>
+
+              <!-- Button -->
+              <div class="control-group">
+                <label class="control-label" for="singlebutton"></label>
+                <div class="controls">
+                  <button id="singlebutton" name="singlebutton" class="btn btn-success">Enviar</button>
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      </div>
+      </div>
+<br><br>
+<br><br>
+<!-- Inicio do footer -->
+<section class="footer">
+    <div class="container">
+       
+          <div class="col-lg-4  col-md-4 col-sm-4">
+              <div class="footer_dv">
+                  <h4>Suplementos</h4>
+                  <ul>
+                      <li class="line_rv"><a href="canon-printer-support.php">Suplementos para Emagrecimento</a></li>
+               
+                        <li><a href="hp-printer-support.php">Suplementos para Bucking</a></li>
+                        <li><a href="dell-printer-support.php">Suplementos para Cutting</a></li>
+                        <li><a href="epson-printer-support.php">Suplementos em Promoção</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4  col-md-4 col-sm-4">
+              <div class="footer_dv">
+                  <h4>CADASTRE-SE</h4>
+                  <ul>
+                      <li><a href="form_cliente_fisico.html">Cliente Fisico</a></li>
+                        <li><a href="form_cliente_juridico.html">Cliente Juridico</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4  col-md-4 col-sm-4">
+              <div class="footer_dv">
+                  <h4>Entre em Contato</h4>
+                  <p>Pulse Suporte 24hs</p>
+            <p>BRA-SP +55 (11) 2781-2675<br>
+
+        
+                </p></div>
+            </div>
+       
+    </div>
+</section>
+
+<!-- JS -->
+  <script src="../resources/js/js_nav.js"></script>
+  <script src="../resources/js/bootstrap.min.js"></script>
+    </body>
+    </html>

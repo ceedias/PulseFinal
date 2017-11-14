@@ -35,6 +35,12 @@
                         </p:column>
                         <p:column>
                             <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCarrinhoTitle_produto}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.produto}"/>
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
                                 <h:outputText value="#{bundle.ListCarrinhoTitle_id}"/>
                             </f:facet>
                             <h:outputText value="#{item.id}"/>

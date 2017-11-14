@@ -18,13 +18,12 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 
-
 @Named("carrinhoController")
 @SessionScoped
 public class CarrinhoController implements Serializable {
 
-
-    @EJB private com.br.pulse.controller.CarrinhoFacade ejbFacade;
+    @EJB
+    private com.br.pulse.controller.CarrinhoFacade ejbFacade;
     private List<Carrinho> items = null;
     private Carrinho selected;
 
@@ -121,7 +120,7 @@ public class CarrinhoController implements Serializable {
         return getFacade().findAll();
     }
 
-    @FacesConverter(forClass=Carrinho.class)
+    @FacesConverter(forClass = Carrinho.class)
     public static class CarrinhoControllerConverter implements Converter {
 
         @Override
@@ -129,7 +128,7 @@ public class CarrinhoController implements Serializable {
             if (value == null || value.length() == 0) {
                 return null;
             }
-            CarrinhoController controller = (CarrinhoController)facesContext.getApplication().getELResolver().
+            CarrinhoController controller = (CarrinhoController) facesContext.getApplication().getELResolver().
                     getValue(facesContext.getELContext(), null, "carrinhoController");
             return controller.getCarrinho(getKey(value));
         }

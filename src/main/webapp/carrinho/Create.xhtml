@@ -16,14 +16,12 @@
                         <p:selectOneMenu id="pessoa" value="#{carrinhoController.selected.pessoa}" required="true" requiredMessage="#{bundle.EditCarrinhoRequiredMessage_pessoa}">
                             <f:selectItems value="#{pessoaController.itemsAvailableSelectOne}"
                                            var="pessoaItem"
-                                           itemLabel="#{pessoaItem.nome}"
                                            itemValue="#{pessoaItem}"/>
                         </p:selectOneMenu>
                         <p:outputLabel value="#{bundle.CreateCarrinhoLabel_produto}" for="produto" />
                         <p:selectOneMenu id="produto" value="#{carrinhoController.selected.produto}" >
                             <f:selectItems value="#{produtoController.itemsAvailableSelectOne}"
                                            var="produtoItem"
-                                           itemLabel="#{produtoItem.nome}"
                                            itemValue="#{produtoItem}"/>
                         </p:selectOneMenu>
                         <p:outputLabel value="#{bundle.CreateCarrinhoLabel_id}" for="id" />

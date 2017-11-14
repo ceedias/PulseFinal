@@ -1,0 +1,93 @@
+
+
+.form-inline-space
+{
+    margin-bottom: 15px;
+}
+
+body {
+background-color:  #1C86EE
+}
+
+.container {
+    background-color: white;
+}
+
+h2 /* Titulos */
+{
+    color: #1E90FF;
+    font-family: Heuvetica, Arial, Sans;
+    text-decoration: none;
+    border-bottom: 2px solid #1E90FF;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: bold;
+}
+
+header
+{
+    margin-bottom: 22px;
+    font-size: 12px;
+    font-style: italic;
+    color: #b5b5b5;
+}
+
+.icon-help
+{
+    display: inline-block;
+    padding: 2px 5px 0px;
+    color: #ffffff;
+    background-color: #d14f27;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+h2 .glyphicon
+{
+    font-size: 21px;
+    padding-right: 5px;
+}
+
+.panel-default>.panel-heading /* Caixinhas */
+{
+    color: #ffffff;
+    background-color: #1E90FF;
+    border-color: #ddd;
+}
+
+.input-group-addon
+{
+    color: #ffffff;
+    background-color: #1E90FF;
+}
+
+label
+{
+    color: #175e99;
+}
+
+#second {
+	margin-left: 60px;
+	
+}
+
+#first {
+	margin-left: 30px;
+}
+
+.col-md-3 {
+	margin-left: 60px;
+}
+
+.col-md-2 {
+	margin-left: 60px;
+}
+
+#iCEP {
+	margin-right:90px;
+}
+
+#estados {
+	width:65px;
+	
+}

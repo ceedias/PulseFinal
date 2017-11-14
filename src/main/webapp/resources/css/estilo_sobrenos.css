@@ -1,0 +1,115 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
+
+body {
+  background-color: #1C86EE;
+}
+
+
+section{width:100%; float:left;}
+.banner-section{background-image:url("https://static.pexels.com/photos/216988/pexels-photo-216988.jpeg"); background-size:cover; height: 380px; left: 0; position: absolute; top: 0; background-position:0;}
+.post-title-block{padding:100px 0;}
+.post-title-block h1 {color: #fff; font-size: 85px; font-weight: bold; text-transform: capitalize;}
+.post-title-block li{font-size:20px; color: #fff;}
+.image-block{float:left; width:100%; margin-bottom:10px;}
+.footer-link{float:left; width:100%; background:#222222; text-align:center; padding:30px;}
+.footer-link a{color:#A9FD00; font-size:18px; text-transform:uppercase;}
+
+/* Titulo */
+
+h1 {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 3.7em;
+}
+
+h2 {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  color: #ccc;
+  font-size: 1.9em;
+}
+
+.page-header {
+  border: none;
+  text-align: center;
+}
+  .page-header h1 {
+    margin-bottom: 6px;
+  }
+  .page-header h2 {
+    margin-top: 0;
+  }
+
+.icon-bar {
+  font-size: 1.3em;
+  position: relative;
+  color: #ff9933;
+}
+
+.icon-bar:after,
+.icon-bar:before
+{
+  display: block;
+  content: '';
+  width: 70px;
+  height: 1px;
+  background: #ccc;
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.icon-bar:before {
+  left: auto;
+  right: 35px;
+}
+
+#face {
+  width: 30px;
+}
+
+.row {
+
+  background-color: white;
+}
+
+.footer {
+    background: #222222 none repeat scroll 0 0;
+    border-top: 4px solid #fcab0e;
+    margin: 0;
+    padding: 20px 0;
+}
+.footer_dv {
+    width: 100%;
+}
+.footer_dv h4 {
+    color: #fcab0e;
+    font-family: roboto;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.footer_dv ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.footer_dv ul li:first-child {
+    border-top: medium none;
+    box-shadow: none;
+}
+.footer_dv ul li {
+    border-top: 1px solid #000;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2);
+    color: #f1f2f2;
+    padding: 5px 0;
+}
+.footer_dv p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 15px;
+    text-align: justify;
+}

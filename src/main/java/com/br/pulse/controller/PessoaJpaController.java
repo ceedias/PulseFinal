@@ -79,7 +79,7 @@ public class PessoaJpaController implements Serializable {
             throw ex;
         } finally {
             if (em != null) {
-                em.close(); //fechou
+                em.close();
             }
         }
     }

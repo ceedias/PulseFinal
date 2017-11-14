@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+             template="template_menu.xhtml"
+             xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+
+    <ui:define name="menu">
+        <link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.css" /> 
+        <link rel="stylesheet" type="text/css" href="../resources/css/estilo.css" /> 	
+        <br/>
+        <h:form>
+            <p:growl id="growl" showDetail="true" sticky="true" />
+            <p:panelGrid columns="2" style="background-color: #1E90FF; ">
+                <h:outputLabel value="Login"/>
+                <p:inputText  id="login" value="#{pessoaBean.pessoa.login}"/>
+                <h:outputLabel value="Senha"/>
+                <p:password  id="senha" value="#{pessoaBean.pessoa.senha}"/>
+
+                <p:commandButton action="#{pessoaBean.verificaLogin()}" value="Logar" update="growl"> </p:commandButton>
+            </p:panelGrid>
+        </h:form>		
+
+    </ui:define>
+</ui:decorate>
+
